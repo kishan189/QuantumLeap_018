@@ -2,7 +2,8 @@ import React from 'react'
 import Cards from './Card'
 import Carousel from './Carousel'
 import Footer from './Footer'
-import { Exploration } from './Exploration'
+import { Exploration } from './Exploration';
+
 const Home = () => {
     
   return (
@@ -14,6 +15,7 @@ const Home = () => {
    <div style={{marginTop:30}}>
      <Cards/>
    </div>
+   
    <Exploration/>
    <Footer/>
     </>

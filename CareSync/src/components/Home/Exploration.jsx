@@ -12,7 +12,7 @@ export const Exploration = () => {
         CareSync has dedicated Centres of Excellence for several key specialties and super specialties. They are unique and state of the art facilities
     </p>
      <p>
-        spread across several of the Apollo hospital locations and each Centre of Excellence stands out as a citadel of world class clinical outcomes.
+        spread across several of the hospital locations and each Centre of Excellence stands out as a citadel of world class clinical outcomes.
      </p>
      <div>
         <p>
