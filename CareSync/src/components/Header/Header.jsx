@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-
+import {NavLink } from 'react-router-dom';
 import logo from '../../assets/CareSync_logo.jpeg'
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
       {/* Navigation Links */}
       <nav className="nav-links">
      
-        <a href="#home">Home</a>
+        <NavLink to="/" >Home</NavLink>
         <a href="#about">About Us</a>
         <a href="#programs">Programs</a>
         <a href="#contact">Contact</a>
@@ -37,6 +37,8 @@ const Header = () => {
         <a href="#profile">
            Login
         </a>
+        <NavLink to="/Admin">Admin</NavLink>
+        
       </div>
 
       {/* Theme Switcher */}
