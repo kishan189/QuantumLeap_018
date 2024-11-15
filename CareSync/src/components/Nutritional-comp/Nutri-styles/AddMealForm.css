@@ -1,0 +1,97 @@
+.add-meal-form {
+    color: #fff;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-meal-form input,
+.add-meal-form select {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-meal-form input[type="text"],
+.add-meal-form input[type="number"],
+.add-meal-form select {
+    background-color: #333;
+    color: #fff;
+}
+
+.add-meal-form button {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-meal-form button:hover {
+    background-color: #218838;
+}
+
+/* Goal selection section */
+.goal-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.goal-selection h4 {
+    margin: 0;
+    text-align: center; /* Centers the text within the h4 element */
+}
+
+.goal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.goal-button {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.goal-button.active {
+    background-color: #28a745;
+}
+
+.goal-button:hover {
+    background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .add-meal-form {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .add-meal-form input,
+    .add-meal-form select,
+    .add-meal-form button {
+        font-size: 12px;
+    }
+
+    .goal-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
