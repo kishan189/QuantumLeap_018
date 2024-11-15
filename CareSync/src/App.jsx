@@ -1,9 +1,7 @@
-
-import { useState } from 'react'
-
+import React from 'react';
 import './App.css'
-
-import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker.jsx';
+import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker';
+// import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker.jsx';
 import { useState } from 'react';
 import {Routes,Route} from "react-router-dom"
 import Header from './components/Header/Header'
@@ -18,17 +16,14 @@ function App() {
   return (
     <>
 
-    {/* <Header/>
-    <Home/> */}
-    <MealTracker />
-
     <Header/>
     <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Admin' element={<Admin/>}>Admin</Route>
+            <Route path='/Nutrition' element={<MealTracker />}>Admin</Route>
 
         </Routes>
-    
+          
     </>
   )
 }

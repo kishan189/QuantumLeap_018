@@ -53,9 +53,9 @@ export default function UserManagement() {
                     <hr />
                     {usersData.map((el, id) =>
                         <div key={id} className='userDetailsK'>
-                            <h3>Name: {el[1].name}</h3>
-                            <h4>Email: {el[1].email}</h4>
-                            <p>Mobile No.:</p>
+                            <h3>Name: {el.first_name}</h3>
+                            <h4>Email: {el.last_name}</h4>
+                          
                             <div style={{ marginBottom: 10 }}>
                                 <button>Edit</button>
                                 <button onClick={() => handleDelete(id)}>Delete</button>

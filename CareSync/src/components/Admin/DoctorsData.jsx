@@ -14,19 +14,21 @@ export default function DoctorsData() {
           <p>opps! Someting wrong</p>
         )
       }
-
+      // console.log(doctorsData)
   return (
   <div className='usersDataDisplay'> 
               <h2>Doctors Details</h2>
               <hr/>
+              
               {doctorsData.map((el,id)=>
+                //  console.log(el)
                   <div key={id} className='userDetailsK'>
-                    <h3>Name:{el[1].name}</h3>
-                    <h5>{el[1].title}</h5>
-                    <p>{el[1].education}</p>
-                    <p>{el[1].experience}</p>
-                    <p>{el[1].address}</p>
-                    <p>status:{el[1].status?"available":"booked"}</p>
+                    <h3>Name:{el.name}</h3>
+                    <h5>{el.speciality}</h5>
+                    <p>{el.qualification}</p>
+                    <p>{el.experience}</p>
+                    <p>{el.location}</p>
+                    <p>availability:{el.availability?"available":"booked"}</p>
                     <div style={{marginBottom:10}}>
                       <button>Edit</button>
                       <button>Delete</button>

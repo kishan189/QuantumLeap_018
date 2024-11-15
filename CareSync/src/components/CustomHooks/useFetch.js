@@ -9,7 +9,7 @@ function useFetch(url){
         setIsLoading(true)
         axios.get(url)
         .then((res)=>{
-           let ans=Object.entries(res.data)
+           let ans=res.data
            setDatas(ans)
            
         })

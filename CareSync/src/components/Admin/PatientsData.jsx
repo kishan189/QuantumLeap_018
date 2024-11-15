@@ -22,11 +22,13 @@ export default function PatientsData() {
               {patientsData.map((el,id)=>
                   <div key={id} className='userDetailsK'>
                    
-                    <h3>Name:{el[1].name}</h3>
-                    <p>age:{el[1].age}</p>
-                    <p>Mobile No.:{el[1].mobile}</p>
-                    <p>address: {el[1].address}</p>
-                    <p>status:{el[1].status?"pending":"booked"}</p>
+                    <h3>Name:{el.first_name}</h3>
+                    <h3>Last Name:{el.last_name}</h3>
+                    <p>gender:{el.gender}</p>
+                    <p>age:{el.age}</p>
+                    <p>Mobile No.:{el.mobile}</p>
+                    {/* <p>address: {el[1].address}</p> */}
+                    <p>status:{el.status?"pending":"booked"}</p>
                     <div style={{marginBottom:10}}>
                       <button>Edit</button>
                       <button>Delete</button>
