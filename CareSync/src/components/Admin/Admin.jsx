@@ -6,7 +6,7 @@ export default function Admin() {
   return (
     <>
     <div>Admin</div>
-    {/* <UserManagement/> */}
+    <UserManagement/>
     <ApointmentManag/>
     <AddDataForm/>
     </>
