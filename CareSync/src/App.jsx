@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/Home/Home'
 // import NavBar from './components/NavLinks/NavLink'
 import Admin from './components/Admin/Admin'
+import BookAppointment from './components/BookAppointment/BookAppointment'
 function App() {
   
 
@@ -14,6 +15,8 @@ function App() {
     <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Admin' element={<Admin/>}>Admin</Route>
+            <Route path="/book-appointment" element={<BookAppointment />} />
+            
 
         </Routes>
     
