@@ -15,7 +15,7 @@ function MealList({ meals, onDeleteMeal, onSave, onReset }) {
               .filter((meal) => meal.type === type)
               .map((meal) => (
                 <li key={meal.id}>
-                  {meal.name} - {meal.calories} calories
+                  {meal.name} - {meal.servings} || {meal.calories} calories
                   <button
                     className="delete-button"
                     onClick={() => onDeleteMeal(meal.id)}
