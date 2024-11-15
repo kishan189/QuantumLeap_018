@@ -2,11 +2,11 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default function useUpdate(url) {
+export default function useUpdate() {
     const [IsUpdated, setIsUpdated] = useState(false);
     const [error, setError] = useState("");
 
-    const updateData = async (data) => {
+    const updateData = async (url,data) => {
         setIsUpdated(false);
         setError("");
         try {
