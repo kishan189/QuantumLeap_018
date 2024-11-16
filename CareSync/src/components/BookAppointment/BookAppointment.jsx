@@ -7,6 +7,7 @@ function BookAppointment() {
     return (
    <div>
       <DoctorList />
+      
       {/* <Footer/> */}
       
    </div>
@@ -14,3 +15,5 @@ function BookAppointment() {
   }
   
   export default BookAppointment;
+
+

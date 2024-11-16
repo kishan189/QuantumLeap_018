@@ -22,7 +22,7 @@ const Header = () => {
      
         <NavLink to="/" >Home</NavLink>
         <a href="#about">About Us</a>
-        <a href="#programs">Programs</a>
+        <NavLink to='/book-appointment'> Book Appointment</NavLink>
         {/* <NavLink to="/Nutrition" >Nutrition</NavLink> */}
         <NavLink to="/Nutrition" >Nutrition</NavLink>
         <NavLink to='/HomePhysicalActivityTracker'> Physical Activity Trainer</NavLink>
