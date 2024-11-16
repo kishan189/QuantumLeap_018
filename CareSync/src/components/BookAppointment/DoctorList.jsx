@@ -130,7 +130,7 @@ const DoctorList = () => {
             <DoctorCard key={index} doctor={doctor} />
           ))
         ) : (
-          <p>No doctors available.</p>
+          <p>Loading.....</p>
         )}
       </div>
 

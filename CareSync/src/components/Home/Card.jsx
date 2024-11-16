@@ -24,12 +24,12 @@
 
 // export default Cards; 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Card.css';
 
 const services = [
   { title: 'Book Appointment', icon: '📅', path: '/book-appointment' },
-  { title: 'Book Health Check-Up', icon: '📝', path: '/book-health-checkup' },
+  { title: 'Nutrition Tracking', icon: '📝', path: '/Nutrition-tracking' },
   { title: 'Consult Online', icon: '💻', path: '/consult-online' },
   { title: 'Buy Medicine', icon: '💊', path: '/buy-medicine' },
   { title: 'Find Hospital', icon: '🏥', path: '/find-hospital' },
@@ -39,12 +39,12 @@ const Cards = () => {
   return (
     <div className="service-cards">
       {services.map((service, index) => (
-        <Link to={service.path} key={index} className="card-link">
+        <NavLink to={service.path} key={index} className="card-link">
           <div className={`card ${index === 0 ? 'active' : ''}`}>
             <div className="icon">{service.icon}</div>
             <div className="title">{service.title}</div>
           </div>
-        </Link>
+        </NavLink>
       ))}
     </div>
   );

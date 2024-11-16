@@ -7,7 +7,7 @@ function BookAppointment() {
     return (
    <div>
       <DoctorList />
-      <Footer/>
+      {/* <Footer/> */}
       
    </div>
     )

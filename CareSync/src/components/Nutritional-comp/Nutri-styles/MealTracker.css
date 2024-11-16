@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 1200px;
-    margin-top: 20px;
+    margin: 40px auto;
     gap: 20px; /* Add space between main sections and saved data */
 }
 

@@ -7,8 +7,9 @@ import {Routes,Route} from "react-router-dom"
 import Header from './components/Header/Header'
 import './App.css'
 import Home from './components/Home/Home'
-
+import MealList from './components/Nutritional-comp/Nutri-components/MealList';
 import Admin from './components/Admin/Admin'
+import BookAppointment from './components/BookAppointment/BookAppointment';
 function App() {
   
 
@@ -19,9 +20,10 @@ function App() {
     <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Admin' element={<Admin/>}>Admin</Route>
-
-        </Routes>
-          
+            <Route path='/book-appointment' element={<BookAppointment/>}/>
+            <Route path='/Nutrition-tracking' element={<MealTracker />}>Admin</Route>
+      </Routes>
+     
     </>
   )
 }
