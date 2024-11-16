@@ -9,7 +9,6 @@ import './App.css'
 import Home from './components/Home/Home'
 
 import Admin from './components/Admin/Admin'
-
 function App() {
   
 
@@ -20,7 +19,6 @@ function App() {
     <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Admin' element={<Admin/>}>Admin</Route>
-            <Route path='/Nutrition' element={<MealTracker />}>Admin</Route>
 
         </Routes>
           
