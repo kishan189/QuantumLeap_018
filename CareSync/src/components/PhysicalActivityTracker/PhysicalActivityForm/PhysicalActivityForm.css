@@ -1,0 +1,16 @@
+.goalsCustomDiv {
+    border: 2px solid #b5b5b5;
+    text-align: center;
+    margin: 16px 0;
+    cursor: pointer;
+}
+
+.goalsCustomDiv p {
+    margin: 0;
+    padding: 16px;
+}
+
+.goalsCustomDiv :hover {
+    border: 2px solid #006eff;
+    color: #006eff;
+}

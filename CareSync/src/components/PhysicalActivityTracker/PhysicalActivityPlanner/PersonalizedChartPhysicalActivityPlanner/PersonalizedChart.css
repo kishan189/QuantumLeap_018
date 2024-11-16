@@ -1,0 +1,51 @@
+.customContainerPersonalizedChart{
+    background-color: #007c9d;
+    color: white;
+    padding: 0 32px;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+.customContainerPersonalizedChart span{
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 16px;
+}
+.customContainerPersonalizedChart span:hover{
+    background-color: #005d77;
+}
+.streakDiv{
+    width: 100%;
+    display: flex;
+}
+.streakDiv p{
+    padding: 0;
+    margin: 0;
+}
+.dashboardPersonalizedChart{
+    padding: 32px 0;
+}
+.userDetails h3{
+    margin: 0;
+    padding:0 ;
+}
+.userDetails span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.customHr{
+    border-bottom: 2px solid #007c9d;
+    margin-bottom: 32px;
+}
+.customDays{
+    width: 14%;
+}
+.customTasks{
+    
+    padding: 4px;
+    
+}
+.customTasks div{
+    border-right: 1px solid #007c9d;
+    border-bottom: 1px solid #007c9d;
+}
