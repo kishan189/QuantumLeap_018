@@ -1,0 +1,54 @@
+.customFormPhy{
+    width: 100%;
+    text-align: center;
+    padding: 0px 10px 26px 10px;
+    border: 2px solid #cfcfcf;
+    border-radius: 12px;
+    box-shadow: -14px 24px 181px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    overflow: hidden;
+}
+.customProgressBar{
+    width: 110%;
+    height: 7px;
+    margin: 0 -10px;
+    background: #f9f9f9;
+    margin-bottom: 26px;
+}
+.customProgressStatus{
+    width: 25%;
+    background: #0066ee;
+    height: 5px;
+}
+.formCustomInputs{
+    text-align: left;
+    width: 75%;
+    margin: auto;
+}
+
+.genderBoxCustom{
+    display: flex;
+    width: 100%;
+}
+.customFormPhy input{
+    margin-bottom: 10px;
+}
+.customFormPhy label{
+    font-weight: 500;
+}
+.buttonCustomPage{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.customBtn.primary{
+    background-color: #0066ee;
+    color: #f9f9f9;
+    margin-top: 16px;
+}
+.customBtn.secondary{
+    background-color: #f9f9f9;
+    color: black;
+    border: 1px solid #cfcfcf;
+    margin-top: 16px;
+}
