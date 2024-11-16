@@ -2,7 +2,7 @@ import React from 'react';
 import '../Nutri-styles/MealList.css';
 import { FaTrash } from 'react-icons/fa';
 
-function MealList({ meals, onDeleteMeal, onSave, onReset }) {
+function MealList({ meals=[], onDeleteMeal, onSave, onReset }) {
   const mealTypes = ['Breakfast', 'Lunch', 'Dinner', 'Snack'];
 
   return (
@@ -15,7 +15,7 @@ function MealList({ meals, onDeleteMeal, onSave, onReset }) {
               .filter((meal) => meal.type === type)
               .map((meal) => (
                 <li key={meal.id}>
-                  {meal.name} - {meal.servings} || {meal.calories} calories
+                  {meal.name} - {meal.calories} calories
                   <button
                     className="delete-button"
                     onClick={() => onDeleteMeal(meal.id)}
@@ -37,3 +37,4 @@ function MealList({ meals, onDeleteMeal, onSave, onReset }) {
 }
 
 export default MealList;
+

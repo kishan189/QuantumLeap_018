@@ -6,6 +6,7 @@ import useUpdate from '../CustomHooks/useUpdate';
 export default function PatientsData() {
 
     const [patientsData,isLoading33,error33]=useFetch("https://caresync-3911d-default-rtdb.firebaseio.com/patients.json");
+    
     const [DeleteData, isDeleted, deleteError] = useDelete();
 
     

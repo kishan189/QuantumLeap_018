@@ -1,5 +1,4 @@
 import React from 'react'
-import ApointmentManag from './ApointmentManag';
 import UserManagement from './UserManagement';
 import AddDataForm from '../CustomHooks/Posting';
 export default function Admin() {
@@ -7,8 +6,7 @@ export default function Admin() {
     <>
     <div>Admin</div>
     <UserManagement/>
-    {/* <ApointmentManag/> */}
-   
+       
     </>
   )
 }

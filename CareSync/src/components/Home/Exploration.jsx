@@ -7,7 +7,7 @@ export const Exploration = () => {
 
   return (
     <div className='ExploreSection'>
-    <div style={{marginTop:40}}><h1>Explore our Centres of Clinical Excellence</h1></div>
+    <div style={{marginTop:40,marginBottom:40}}><h1>Explore our Centres of Clinical Excellence</h1></div>
     <p>
         CareSync has dedicated Centres of Excellence for several key specialties and super specialties. They are unique and state of the art facilities
     </p>
@@ -20,7 +20,7 @@ export const Exploration = () => {
         </p>
      </div>
     
-    <div>
+    <div style={{marginTop:40,marginBottom:40}}>
         <div>
            <img style={{width:300,height:400,marginRight:20}} src='https://www.apollohospitals.com/wp-content/themes/apollohospitals/assets-v3/images/speciality_ah.webp' alt='image'/>
           
