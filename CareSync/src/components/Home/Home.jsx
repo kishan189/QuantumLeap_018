@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
 
-    <div style={{marginTop:50}}>
+    <div >
     <Carousel/>
     </div>
    <div style={{marginTop:30}}>
