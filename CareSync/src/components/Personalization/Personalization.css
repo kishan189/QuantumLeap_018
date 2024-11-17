@@ -1,0 +1,73 @@
+.personalization-container {
+    padding: 20px;
+    font-family: "Arial, sans-serif";
+    background: linear-gradient(to bottom, #e6f7ff, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-intro h1 {
+    color: #4caf50;
+    font-size: 2rem;
+  }
+  
+  .user-intro ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-intro li {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .health-roadmap {
+    margin-top: 20px;
+  }
+  
+  .health-roadmap ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .health-roadmap li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .health-roadmap li.completed {
+    text-decoration: line-through;
+    background: #dff0d8;
+  }
+  
+  .recommendations {
+    margin-top: 20px;
+  }
+  
+  .recommendation-category {
+    margin-bottom: 20px;
+  }
+  
+  .recommendation-category h3 {
+    color: #4caf50;
+  }
+  
+  .recommendation-category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recommendation-category li {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
