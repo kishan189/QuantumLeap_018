@@ -60,9 +60,9 @@ const Header = () => {
                   <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="#"><NavLink to="/">Home</NavLink></a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a className="nav-link" href="#"><a href="#about">About Us</a></a>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <a className="nav-link" href="#"><NavLink to="/Nutrition">Nutrition</NavLink></a>
                   </li>
