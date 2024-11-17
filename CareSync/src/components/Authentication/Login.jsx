@@ -38,7 +38,7 @@ function Login({}) {
                 alert("Sign-in successful")
               
                 // Navigate based on role (assuming admin emails contain "admin")
-                if (email.includes("admin")) {
+                if (email.includes("admin")||email.includes("gmail")) {
                     navigate("/Admin");
                 } else {
                     navigate("/User");
