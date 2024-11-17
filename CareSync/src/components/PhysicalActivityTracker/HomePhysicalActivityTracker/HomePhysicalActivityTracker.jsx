@@ -1,9 +1,13 @@
 import "../HomePhysicalActivityTracker/HomePhysicalActivityTracker.css"
 import {NavLink } from 'react-router-dom';
+import imgBgPhy2 from "../../../assets/imgBgPhy2.png";
+import homePhysicalActivity from "../../../assets/homePhysicalActivity.png";
+import kjizize from "../../../assets/kjizize.jpg";
 const HomePhysicalActivityTracker = () => {
     return <>
+   
         <div className="homePhysicalTracker">
-            <img src="/src/assets/homePhysicalActivity.png" className="bgPhysicalTraning" />
+            <img src={homePhysicalActivity} className="bgPhysicalTraning" />
             <div className="bgTextHome">
                 <h1>Reach Your Best</h1>
                 <p>Whether you’re training for a marathon or your biggest season yet, we’re here to help you make serious progress.</p>
@@ -24,7 +28,7 @@ const HomePhysicalActivityTracker = () => {
                             </div>
                         </div>
                         <div className="col-sm-7">
-                            <img src="/src/assets/imgBgPhy2.png" />
+                            <img src={imgBgPhy2} />
                         </div>
                     </div>
                 </div>
@@ -36,7 +40,7 @@ const HomePhysicalActivityTracker = () => {
                 <div className="col-sm-10 offset-sm-1">
                     <div className="row customBlackBg">
                         <div className="col-sm-7">
-                            <img src="/src/assets/kjizize.jpg"></img>
+                            <img src={kjizize}></img>
                         </div>
                         <div className="col-sm-5">
                             <div className="pyContent">
