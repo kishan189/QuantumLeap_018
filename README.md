@@ -24,15 +24,16 @@ This project is perfect for individuals seeking to:
 ## **Directory Structure**
 ```bash
 CareSync/
-├─ dist/ │
-├─ public/ │
-├─ src/ │
+   ├─ dist/ │
+   ├─ public/ │
+   ├─ src/ │
 ├─ eslint.config.js
 ├─ index.html
 ├─ package-lock.json
 ├─ package.json
 ├─ vite.config.js
 ├─ README.md
+
 ```
 
 ---
