@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Login from './components/Authentication/login.jsx';
+import Login from './components/Authentication/Login.jsx';
 import Register from './components/Authentication/Register.jsx';
 import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker';
 // import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker.jsx';
