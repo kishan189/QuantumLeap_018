@@ -1,5 +1,196 @@
 
-.userDetailsK{
-    border: 1px solid;
-    margin-top: 10px;
+.userzDetailsg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .trioContainerudp {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .usersDataDisplay {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .userDetailsK {
+    margin-bottom: 20px;
+  }
+  
+  .userDetailsK h3,
+  .userDetailsK h4,
+  .userDetailsK p {
+    margin: 8px 0;
+  }
+  
+  .userDetailsK div {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .userDetailsK button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .userDetailsK button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+
+/* General Styling */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Button to toggle form visibility */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
 }
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Container */
+.formForUpdateDatas {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Fields */
+.formForUpdateDatas input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.formForUpdateDatas input[type='text']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='password']:focus {
+  border-color: #007bff;
+}
+
+/* Submit Button */
+.formForUpdateDatas button[type='submit'] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formForUpdateDatas button[type='submit']:hover {
+  background-color: #218838;
+}
+
+.hiddenformKs {
+  display: none;
+}
+.formForUpdateDatas .formForUpdateDatas {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 10px;
+  background: #f9f9f9;
+}
+/*  */
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  color: white;
+  background-color: #333;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .trioContainerudp {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .usersDataDisplay {
+      width: 90%;
+      max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .userDetailsK button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  
+    .userzDetailsg {
+      padding: 10px;
+    }
+  
+    .usersDataDisplay {
+      padding: 15px;
+    }
+  }
+  

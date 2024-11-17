@@ -3,3 +3,9 @@
     margin: 20px auto;
     text-align: center;
 }
+.customImgBox {
+    height: 400px;
+    width: 334px;
+    overflow: hidden;
+    margin-right: 20px;
+}

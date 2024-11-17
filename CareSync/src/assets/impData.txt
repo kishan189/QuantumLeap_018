@@ -1,0 +1,10 @@
+patients data
+https://caresync-3911d-default-rtdb.firebaseio.com/patients.json
+
+doctors data
+
+https://caresync-3911d-default-rtdb.firebaseio.com/doctors.json
+
+users data
+
+https://caresync-3911d-default-rtdb.firebaseio.com/users.json
