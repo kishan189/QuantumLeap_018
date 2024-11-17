@@ -6,8 +6,8 @@ const services = [
   { title: 'Book Appointment', icon: '📅', path: '/book-appointment' },
   { title: 'Nutrition Tracking', icon: '📝', path: '/Nutrition-tracking' },
   { title: 'Physical Activity Trainer', icon: '💻', path: '/ Physical Activity Trainer' },
-  { title: 'Buy Medicine', icon: '💊', path: '/buy-medicine' },
-  { title: 'Find Hospital', icon: '🏥', path: '/find-hospital' },
+  // { title: 'Buy Medicine', icon: '💊', path: '/buy-medicine' },
+  // { title: 'Find Hospital', icon: '🏥', path: '/find-hospital' },
 ];
 
 const Cards = () => {
