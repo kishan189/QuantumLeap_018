@@ -9,8 +9,7 @@ export default function UserManagement() {
  
     return (
         <div className='userzDetailsg'>
-            <div>User Management</div>
-           
+            <div style={{marginBottom:15}}>Users Management</div> 
             <div className='trioContainerudp'>
                
                 <UsersData/>

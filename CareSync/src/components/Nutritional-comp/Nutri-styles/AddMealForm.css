@@ -1,6 +1,6 @@
 .add-meal-form {
     color: #fff;
-    background-color: #222;
+    background-color:gray;
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -19,8 +19,8 @@
 .add-meal-form input[type="text"],
 .add-meal-form input[type="number"],
 .add-meal-form select {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color:black;
 }
 
 .add-meal-form button {

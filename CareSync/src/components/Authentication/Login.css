@@ -1,0 +1,112 @@
+/* General styles */
+.LoginBody {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    color: #333;
+}
+
+/* Container for the login form */
+.containerLogin {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title */
+.containerLogin h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Form styles */
+.containerLogin form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label styles */
+.containerLogin label {
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Input fields */
+.containerLogin input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background: #f9f9f9;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.containerLogin input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.4);
+}
+
+/* Submit button */
+.containerLogin button[type="submit"] {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.containerLogin button[type="submit"]:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    box-shadow: 0 4px 10px rgba(37, 117, 252, 0.4);
+}
+
+/* Error message styles */
+.containerLoginp {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .containerLogin {
+        padding: 20px;
+    }
+
+   .containerLogin h1 {
+        font-size: 1.5rem;
+    }
+
+   .containerLogin input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    button[type="submit"] {
+        font-size: 0.9rem;
+    }
+}

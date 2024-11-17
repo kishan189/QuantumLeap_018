@@ -41,7 +41,7 @@
 
 .saved-data {
     width: 98.3%;
-    background-color: #222;
+    background-color: gray;
     padding: 10px;
     border-radius: 8px;
     color: #fff;
@@ -108,7 +108,7 @@
 }
 
 .save-modal-content {
-    background: #222;
+    background:gray;
     padding: 20px;
     border-radius: 8px;
     color: #fff;
