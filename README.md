@@ -16,7 +16,7 @@ This project is perfect for individuals seeking to:
 ---
 
 ## **Deployed Link**
-- [Click Here]([#](https://visionary-crostata-0ee9ad.netlify.app/))  
+- [Click Here]([https://visionary-crostata-0ee9ad.netlify.app/])  
 
 
 ---
