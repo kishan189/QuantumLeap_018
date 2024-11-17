@@ -1,4 +1,4 @@
-body {
+ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ body {
   color: black;
 }
 
-/* Doctor Cards Grid */
+
 .doctor-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -56,10 +56,10 @@ body {
   row-gap: 20px;
   color: black;
   justify-content: center;
-}
+} 
 
 /* Pagination */
-.pagination {
+ .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
   color: #666;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
   .doc_header {
     flex-wrap: wrap; 
@@ -111,7 +111,7 @@ body {
 
 @media (max-width: 768px) {
   .doctor-cards {
-    grid-template-columns: 1fr; /* One card per row */
+    grid-template-columns: 1fr; 
     column-gap: 20px;
   }
 
@@ -139,3 +139,46 @@ body {
     flex-wrap: wrap;
   }
 }
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.appointment-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.close-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+} 

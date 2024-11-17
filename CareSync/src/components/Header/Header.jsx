@@ -50,9 +50,10 @@ const Header = () => {
       <nav className="nav-links">
         <NavLink to="/">Home</NavLink>
         <a href="#about">About Us</a>
-        <a href="#programs">Programs</a>
+
         <NavLink to="/Nutrition">Nutrition</NavLink>
         <NavLink to="/HomePhysicalActivityTracker">Physical Activity Trainer</NavLink>
+        <NavLink to='/book-appointment'> Book Appointment</NavLink>
       </nav>
 
       {/* Search Bar */}

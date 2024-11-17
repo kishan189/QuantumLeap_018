@@ -1,10 +1,10 @@
 
-  
 import React, { useState } from 'react';
 import './DoctorCard.css';
 
 const DoctorCard = ({ doctor }) => {
   const [showForm, setShowForm] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,8 +13,10 @@ const DoctorCard = ({ doctor }) => {
     appointmentDate: '',
     message: '',
   });
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const handleFormToggle = () => setShowForm((prev) => !prev);
+  const handlePopupToggle = () => setShowPopup((prev) => !prev);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,16 +25,9 @@ const DoctorCard = ({ doctor }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Appointment Details:', formData);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      age: '',
-      appointmentDate: '',
-      message: '',
-    });
     setShowForm(false);
+    setShowPopup(true);
+    setIsFormSubmitted(true); // Mark that form has been submitted
     alert(`Appointment successfully booked with ${doctor.name}!`);
   };
 
@@ -50,9 +45,15 @@ const DoctorCard = ({ doctor }) => {
           <p><strong>Location:</strong> {doctor.location}</p>
           <p><strong>Hospital:</strong> {doctor.hospital_name}</p>
           <p><strong>Ratings:</strong> {doctor.ratings} ★</p>
-          <button className="appointment-button" onClick={handleFormToggle}>
-            Book an Appointment
-          </button>
+
+          <div className="appointment-buttons">
+            <button className="appointment-button" onClick={handleFormToggle}>
+              Book an Appointment
+            </button>
+            <button className="booked-appointment-button" onClick={handlePopupToggle}>
+              Booked Appointments
+            </button>
+          </div>
         </div>
       </div>
 
@@ -138,9 +139,29 @@ const DoctorCard = ({ doctor }) => {
           </div>
         </div>
       )}
+
+      {showPopup && (
+        <div className="popup-overlay" onClick={handlePopupToggle}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <h2>Booked Appointment Details</h2>
+            {isFormSubmitted ? (
+              <>
+                <p><strong>Name:</strong> {formData.name}</p>
+                <p><strong>Email:</strong> {formData.email}</p>
+                <p><strong>Phone:</strong> {formData.phone}</p>
+                <p><strong>Age:</strong> {formData.age}</p>
+                <p><strong>Appointment Date:</strong> {formData.appointmentDate}</p>
+                <p><strong>Message:</strong> {formData.message}</p>
+              </>
+            ) : (
+              <p>No appointment booked</p>
+            )}
+            <button onClick={handlePopupToggle}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default DoctorCard;
-
