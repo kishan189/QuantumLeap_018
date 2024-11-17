@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useFetch from '../CustomHooks/UseFetch';
 import useDelete from '../CustomHooks/useDelete';
 import useUpdate from '../CustomHooks/useUpdate';
+
 import "./Admin.css";
 export default function DoctorsData() {
   
@@ -51,7 +52,7 @@ export default function DoctorsData() {
     const [availability,setAvailability]=useState("")
     
     const handleEdit=async(id,name,specialty,experience,qualification,location,availability)=>{
-       setOldId(id)
+       setOldId(id||"")
         setName(name||"")
         setSpecialty(specialty||"")
         setExperience(experience||"")
@@ -164,7 +165,7 @@ export default function DoctorsData() {
                  <button onClick={()=>handleEdit(user.id,user.name,user.specialty,user.experience,user.qualification,user.location,user.availability)}>
                    {isFormVisible ? 'Cancel' : 'edit'}
                    </button>
-                 <button onClick={()=> handleDelete(id)}>Delete</button>
+                 <button onClick={()=> handleDelete(user.id,user.name)}>Delete</button>
                </div>
                <hr />
               </div>

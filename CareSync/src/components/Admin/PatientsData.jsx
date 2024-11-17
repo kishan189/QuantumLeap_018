@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Admin.css";
-import useFetch from '../CustomHooks/UseFetch';
+import useFetch from "../CustomHooks/UseFetch";
 import useDelete from '../CustomHooks/useDelete';
+
 import useUpdate from '../CustomHooks/useUpdate';
 
 export default function PatientsData() {
