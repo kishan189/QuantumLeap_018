@@ -20,7 +20,7 @@ function App() {
 
     {/* <Header/>
     <Home/> */}
-    <MealTracker />
+    {/* <MealTracker /> */}
 
     <Header/>
     <Routes>
