@@ -24,6 +24,7 @@ const Header = () => {
         <a href="#about">About Us</a>
         <a href="#programs">Programs</a>
         <NavLink to="/Nutrition" >Nutrition</NavLink>
+        <NavLink to="/Personalization" >Personalization</NavLink>
       </nav>
 
       {/* Search Bar */}

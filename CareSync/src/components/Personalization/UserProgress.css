@@ -1,0 +1,18 @@
+.user-progress {
+    padding: 20px;
+    background-color: #f1f3f5;
+    border-radius: 8px;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  .progress-label {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+  

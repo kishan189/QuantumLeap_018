@@ -1,0 +1,17 @@
+.recommendation-container {
+    padding: 15px;
+    background-color: #e7f5ff;
+    border-radius: 8px;
+  }
+  
+  .recommendation-item {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .recommendation-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  

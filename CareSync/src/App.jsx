@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker';
 // import MealTracker from './components/Nutritional-comp/Nutri-components/MealTracker.jsx';
+import PersonalizationDashboard from './components/Personalization/PersonalizationDashboard';
 import { useState } from 'react';
 import {Routes,Route} from "react-router-dom"
 import Header from './components/Header/Header'
@@ -21,8 +22,9 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/Admin' element={<Admin/>}>Admin</Route>
             <Route path='/Nutrition' element={<MealTracker />}>Admin</Route>
+            <Route path='/Personalization' element={<PersonalizationDashboard/>}>Admin</Route>
 
-        </Routes>
+    </Routes>
           
     </>
   )
