@@ -22,6 +22,10 @@ function App() {
   return (
     <>
 
+    {/* <Header/>
+    <Home/> */}
+    {/* <MealTracker /> */}
+
     <Header/>
     <Routes>
             <Route path='/' element={<Home/>}/>
