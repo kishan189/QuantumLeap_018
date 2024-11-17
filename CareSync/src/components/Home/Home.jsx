@@ -3,6 +3,9 @@ import Cards from './Card'
 import Carousel from './Carousel'
 import Footer from './Footer'
 import { Exploration } from './Exploration';
+import imgBgPhy2 from '../../assets/imgBgPhy2.png';
+import kjizize from "../../assets/kjizize.jpg";
+
 
 const Home = () => {
     
@@ -30,7 +33,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-sm-7">
-                            <img src="/src/assets/imgBgPhy2.png" />
+                            <img src={imgBgPhy2} />
                         </div>
                     </div>
                 </div>
@@ -42,7 +45,7 @@ const Home = () => {
                 <div className="col-sm-10 offset-sm-1">
                     <div className="row customBlackBg">
                         <div className="col-sm-7">
-                            <img src="/src/assets/kjizize.jpg"></img>
+                            <img src={kjizize}></img>
                         </div>
                         <div className="col-sm-5">
                             <div className="pyContent">
