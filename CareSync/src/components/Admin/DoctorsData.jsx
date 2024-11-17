@@ -44,21 +44,21 @@ export default function DoctorsData() {
     const [isFormVisible, setFormVisible] = useState(false);
     const [oldId,setOldId]=useState(null)
     const [name,setName]=useState("")
-    const [speciality,setSpeciality]=useState("")
+    const [specialty,setSpecialty]=useState("")
     const [qualification,setQualification]=useState("")
     const [experience,setExperience]=useState("")
     const [location,setLocation]=useState("")
     const [availability,setAvailability]=useState("")
     
-    const handleEdit=async(id,name,speciality,experience,qualification,location,availability)=>{
+    const handleEdit=async(id,name,specialty,experience,qualification,location,availability)=>{
        setOldId(id)
         setName(name||"")
-        setSpeciality(speciality||"")
+        setSpecialty(specialty||"")
         setExperience(experience||"")
         setAvailability(availability||"")
         setQualification(qualification||"")
         setLocation(location||"")
-        setFormVisible(true)
+        setFormVisible(!isFormVisible)
   
     }
     // form handle
@@ -66,7 +66,7 @@ export default function DoctorsData() {
         e.preventDefault()
         const updatedUser={
             name:name,
-            speciality:speciality,
+            specialty:specialty,
             qualification:qualification,
             experience:experience,
             location:location,
@@ -128,7 +128,7 @@ export default function DoctorsData() {
                         <input type='text' value={name} onChange={(e)=>setName(e.target.value)} placeholder='first_name'/>
                     </div>
                     <div>
-                        <input type='text' value={speciality} onChange={(e)=>setSpeciality(e.target.value)} placeholder='last_name'/>
+                        <input type='text' value={specialty} onChange={(e)=>setSpecialty(e.target.value)} placeholder='last_name'/>
                     </div>
                     <div>
                         <input type='number' value={qualification} onChange={(e)=>setQualification(e.target.value)} placeholder='age'/>
@@ -151,17 +151,17 @@ export default function DoctorsData() {
               <hr/>
               
               {usersData.length > 0 ? (
-               usersData.map((user)=>
+               usersData.map((user,i)=>
                 //  console.log(el)
-               <div key={user.id} className="userDetailsK">
+               <div key={i} className="userDetailsK">
                <h3>Name: {user.name|| "N/A"}</h3>
-               <p>speciality: {user.speciality || "N/A"}</p>
+               <p>speciality: {user.specialty || "N/A"}</p>
                <p>{user.qualification || "N/A"}</p>
                <p>experience: {user.experience || "N/A"}</p>
                <p>Password: {user.location || "N/A"}</p>
                <p>availability:{user.availability || "N/A"}</p>
                <div style={{marginBottom:10}}>
-                 <button onClick={()=>handleEdit(user.id,user.name,user.speciality,user.experience,user.qualification,user.location,user.availability)}>
+                 <button onClick={()=>handleEdit(user.id,user.name,user.specialty,user.experience,user.qualification,user.location,user.availability)}>
                    {isFormVisible ? 'Cancel' : 'edit'}
                    </button>
                  <button onClick={()=> handleDelete(id)}>Delete</button>

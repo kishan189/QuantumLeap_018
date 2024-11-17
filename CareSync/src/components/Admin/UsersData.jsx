@@ -51,7 +51,7 @@ export default function UsersData() {
     setLastName(last_name || "");
     setEmail2(email || "");
     setPass2(password || "");
-    setFormVisible(true);
+    setFormVisible(!isFormVisible);
   };
 
   // Handle form submission for updates
@@ -137,8 +137,8 @@ export default function UsersData() {
       )}
       <hr />
       {usersData.length > 0 ? (
-        usersData.map((user) => (
-          <div key={user.id} className="userDetailsK">
+        usersData.map((user,i) => (
+          <div key={i} className="userDetailsK">
             <h3>Name: {user.first_name || "N/A"}</h3>
             <p>Last Name: {user.last_name || "N/A"}</p>
             <p>Email: {user.email || "N/A"}</p>
