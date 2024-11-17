@@ -16,6 +16,7 @@ function MealList({ meals, onDeleteMeal, onSave, onReset }) {
               .map((meal) => (
                 <li key={meal.id}>
                   {meal.name} - {meal.servings} || {meal.calories} calories
+                  
                   <button
                     className="delete-button"
                     onClick={() => onDeleteMeal(meal.id)}

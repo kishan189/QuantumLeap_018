@@ -1,91 +1,134 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import useFetch from '../CustomHooks/UseFetch';
 import useDelete from '../CustomHooks/useDelete';
-
+import useUpdate from '../CustomHooks/useUpdate';
+import "./Admin.css";
 export default function DoctorsData() {
+  
+  
 
-    const [doctorsData,isLoading22,error22]=useFetch("https://caresync-3911d-default-rtdb.firebaseio.com/doctors.json");
+    // const [doctorsData,isLoading22,error22]=useFetch("https://caresync-3911d-default-rtdb.firebaseio.com/doctors.json");
+    const [fetchedData, isLoading, fetchError] = useFetch(
+      "https://caresync-3911d-default-rtdb.firebaseio.com/doctors.json"
+    );
+    const [usersData, setUsersData] = useState([]);
     const [DeleteData, isDeleted, deleteError] = useDelete();
+    const [updateData, IsUpdated, updaterror] = useUpdate();
+    
+  // Transform fetched data into an array
+  useEffect(() => {
+    if (fetchedData) {
+      const transformedData = Object.keys(fetchedData)
+        .filter((key) => fetchedData[key] !== null) // Exclude null values
+        .map((key) => ({
+          id: key,
+          ...fetchedData[key],
+        }));
+      setUsersData(transformedData);
+    }
+  }, [fetchedData]);
 
+  // Handle delete user
+  const handleDelete = async (id, name) => {
+    await DeleteData(`https://caresync-3911d-default-rtdb.firebaseio.com/doctors/${id}.json`);
+    if (isDeleted) {
+      alert(`${name} deleted`);
+      setUsersData(usersData.filter((user) => user.id !== id)); // Update state
+    } else if (deleteError.length > 0) {
+      console.error("Something went wrong while deleting:", deleteError);
+    }
+  };
+
+    
+  // Edit user data
     const [isFormVisible, setFormVisible] = useState(false);
     const [oldId,setOldId]=useState(null)
-    const [Name,setName]=useState("")
-    const [speciality,setSpeciality]=useState("")
+    const [name,setName]=useState("")
+    const [specialty,setSpecialty]=useState("")
     const [qualification,setQualification]=useState("")
     const [experience,setExperience]=useState("")
     const [location,setLocation]=useState("")
     const [availability,setAvailability]=useState("")
     
-    const handleEdit=async(id,name,speciality,experience,qualification,location,availability)=>{
+    const handleEdit=async(id,name,specialty,experience,qualification,location,availability)=>{
        setOldId(id)
-        setName(name)
-        setSpeciality(speciality)
-        setExperience(experience)
-        setAvailability(availability)
-        setQualification(qualification)
-        setLocation(location)
+        setName(name||"")
+        setSpecialty(specialty||"")
+        setExperience(experience||"")
+        setAvailability(availability||"")
+        setQualification(qualification||"")
+        setLocation(location||"")
         setFormVisible(!isFormVisible)
   
     }
     // form handle
-    function handleForm(e){
+    const handleForm = async (e) =>{
         e.preventDefault()
-        const obj={
-            name:Name,
-            speciality:speciality,
+        const updatedUser={
+            name:name,
+            specialty:specialty,
             qualification:qualification,
             experience:experience,
             location:location,
             availability:availability
         }
        
-         updateData(`https://caresync-3911d-default-rtdb.firebaseio.com/users/${oldId}.json`,obj)
-        if(IsUpdated){
-            alert("updated user")
-            window.location.reload()
-            console.log("updated")
-        }
-        if(updaterror.length>0){
-            console.log("something gone wrong")
+        await updateData(`https://caresync-3911d-default-rtdb.firebaseio.com/doctors/${oldId}.json`,updatedUser)
+        // if(IsUpdated){
+        //     alert("updated user")
+        //     window.location.reload()
+        //     console.log("updated")
+        // }
+        // if(updaterror.length>0){
+        //     console.log("something gone wrong")
+        // }
+        // setFormVisible(false);
+        if (IsUpdated) {
+          alert("User updated");
+          const updatedUsers = usersData.map((user) =>
+            user.id === oldId ? { ...user, ...updatedUser } : user
+          );
+          setUsersData(updatedUsers);
+        } else if (updaterror.length > 0) {
+          console.error("Something went wrong while updating:", updaterror);
         }
         setFormVisible(false);
-    }
+    };
 
 
-      const handleDelete = async (id) => {
-        DeleteData(`https://caresync-3911d-default-rtdb.firebaseio.com/users/${id}.json`)
-        if(isDeleted){
-            alert("doctor deleted")
-            window.location.reload()
-            console.log("doctor deleted")
-        }
-        if(deleteError.length>0){
-            console.log("someting wrong")
-        }
+      // const handleDelete = async (id) => {
+      //   DeleteData(`https://caresync-3911d-default-rtdb.firebaseio.com/users/${id}.json`)
+      //   if(isDeleted){
+      //       alert("doctor deleted")
+      //       window.location.reload()
+      //       console.log("doctor deleted")
+      //   }
+      //   if(deleteError.length>0){
+      //       console.log("someting wrong")
+      //   }
        
-      };
+      // };
 
-      if(isLoading22){
-        return (
-          <p>Loading........</p>
-        )
-      }
-      if(error22.length>0){
-        return(
-          <p>opps! Someting wrong</p>
-        )
-      }
+      
+   if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (fetchError) {
+    return <p>Oops! Something went wrong</p>;
+  }
       // console.log(doctorsData)
   return (
   <div className='usersDataDisplay'> 
               <h2>Doctors Details</h2>
-              <div className={`formForUpdateDatas ${isFormVisible ? '' : 'hiddenformKs'}`}>
+              {isFormVisible && (
+                <div className={`formForUpdateDatas ${isFormVisible ? '' : 'hiddenformKs'}`}>
                 <form onSubmit={(e)=>handleForm(e)}>
                     <div>
-                        <input type='text' value={Name} onChange={(e)=>setName(e.target.value)} placeholder='first_name'/>
+                        <input type='text' value={name} onChange={(e)=>setName(e.target.value)} placeholder='first_name'/>
                     </div>
                     <div>
-                        <input type='text' value={speciality} onChange={(e)=>setSpeciality(e.target.value)} placeholder='last_name'/>
+                        <input type='text' value={specialty} onChange={(e)=>setSpecialty(e.target.value)} placeholder='last_name'/>
                     </div>
                     <div>
                         <input type='number' value={qualification} onChange={(e)=>setQualification(e.target.value)} placeholder='age'/>
@@ -104,25 +147,33 @@ export default function DoctorsData() {
                     </div>
                 </form>
             </div>
+              )}
               <hr/>
               
-              {doctorsData.map((el,id)=>
+              {usersData.length > 0 ? (
+               usersData.map((user,i)=>
                 //  console.log(el)
-                  <div key={id} className='userDetailsK'>
-                    <h3>Name:{el.name}</h3>
-                    <h5>{el.speciality}</h5>
-                    <p>{el.qualification}</p>
-                    <p>{el.experience}</p>
-                    <p>{el.location}</p>
-                    <p>availability:{el.availability}</p>
-                    <div style={{marginBottom:10}}>
-                    <button onClick={()=>handleEdit(id,el.name,el.speciality,el.experience,el.qualification,el.location,el.availability)}>{isFormVisible ? 'Cancel' : 'edit'}</button>
-                      <button onClick={()=> handleDelete(id)}>Delete</button>
-                    </div>
-                    <hr/>
-                  </div>
-                )}
+               <div key={i} className="userDetailsK">
+               <h3>Name: {user.name|| "N/A"}</h3>
+               <p>speciality: {user.specialty || "N/A"}</p>
+               <p>{user.qualification || "N/A"}</p>
+               <p>experience: {user.experience || "N/A"}</p>
+               <p>Password: {user.location || "N/A"}</p>
+               <p>availability:{user.availability || "N/A"}</p>
+               <div style={{marginBottom:10}}>
+                 <button onClick={()=>handleEdit(user.id,user.name,user.specialty,user.experience,user.qualification,user.location,user.availability)}>
+                   {isFormVisible ? 'Cancel' : 'edit'}
+                   </button>
+                 <button onClick={()=> handleDelete(id)}>Delete</button>
+               </div>
+               <hr />
+              </div>
+                )
+              ) : (
+               <p>No users found.</p>
+              )}
             </div> 
    
   )
 }
+

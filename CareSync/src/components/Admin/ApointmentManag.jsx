@@ -1,7 +1,7 @@
-import React from 'react'
+// import React from 'react'
 
-export default function ApointmentManag() {
-  return (
-    <div>ApointmentManag</div>
-  )
-}
+// export default function ApointmentManag() {
+//   return (
+//     <div>ApointmentManag</div>
+//   )
+// }

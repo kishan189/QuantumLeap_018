@@ -142,6 +142,29 @@ input[type='password']:focus {
   margin-top: 10px;
   background: #f9f9f9;
 }
+/*  */
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  color: white;
+  background-color: #333;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
 
   /* Responsive Styles */
   @media (max-width: 768px) {
