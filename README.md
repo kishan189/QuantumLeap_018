@@ -71,16 +71,13 @@ An in-depth look at the project’s architecture, highlighting backend APIs, fro
    - Real-time appointment updates.  
 
 ### **Advanced Features**
-6. **Search Recommendations**  
-   - Implemented with edit distance algorithms and real-time debouncing for faster suggestions.  
 
-7. **Personalized Health Roadmaps**  
+6. **Personalized Health Roadmaps**  
    - Tree-based data structure to create unique, interactive health plans.  
 
 8. **Admin Dashboard**  
    - Manage users using HashMaps.  
    - View health trends and analytics via data visualization.  
-   - Feedback and support management.  
 
 ---
 
