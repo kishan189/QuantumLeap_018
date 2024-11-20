@@ -6,7 +6,8 @@ In today's fast-paced world, maintaining a healthy lifestyle has become more cri
 This project is perfect for individuals seeking to:  
 - Track physical activities and nutritional intake.  
 - Manage mental wellness through mindfulness exercises and mood tracking.  
-- Receive personalized health insights and recommendations.  
+- Receive personalized health insights and recommendations.
+- Booking appointments with doctors.
 
 ---
 
