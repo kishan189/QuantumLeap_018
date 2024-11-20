@@ -4,7 +4,7 @@
 In today's fast-paced world, maintaining a healthy lifestyle has become more critical yet challenging than ever. The Health and Wellness platform is a holistic and personalized solution that integrates fitness tracking, nutrition management, mental wellness tools, and tailored health recommendations. Unlike existing solutions, it offers a user-centric approach designed to make health management more accessible, effective, and engaging.  
 
 This project is perfect for individuals seeking to:  
-- Track physical activities and nutritional intake.  
+- Track nutritional intake.  
 - Manage mental wellness through mindfulness exercises and mood tracking.  
 - Receive personalized health insights and recommendations.
 - Booking appointments with doctors.
