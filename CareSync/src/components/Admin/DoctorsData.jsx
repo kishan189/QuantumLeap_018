@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useFetch from '../CustomHooks/UseFetch';
+import useFetch from '../CustomHooks/useFetch';
 import useDelete from '../CustomHooks/useDelete';
 import useUpdate from '../CustomHooks/useUpdate';
 
