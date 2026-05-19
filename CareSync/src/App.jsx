@@ -34,7 +34,7 @@ function App() {
             <Route path='/Admin' element={<Admin/>}>Admin</Route>
             <Route path='/book-appointment' element={<BookAppointment/>}/>
             <Route path='/Nutrition-tracking' element={<MealTracker />}>Admin</Route>
-      
+      {/* '/Physical-Activity-Trainer' */}
      
             <Route path='/Nutrition' element={<MealTracker />}>Admin</Route>
             <Route path='/HomePhysicalActivityTracker' element={<HomePhysicalActivityTracker />}>Physical Activity Tracker</Route>

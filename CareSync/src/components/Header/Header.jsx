@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
 
-    <>
+  
       
 
       <header className="header">
@@ -59,7 +59,10 @@ const Header = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <div className='d-flex'>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#"><NavLink to="/">Home</NavLink></a>
+                    {/* <a className="nav-link active" aria-current="page" href="#"><NavLink to="/">Home</NavLink></a> */}
+                    <NavLink className="nav-link" to="/">
+                    Home
+                  </NavLink>
                   </li>
                   {/* <li className="nav-item">
                     <a className="nav-link" href="#"><a href="#about">About Us</a></a>
@@ -111,7 +114,7 @@ const Header = () => {
           </div>
         </nav>
       </header>
-    </>
+   
 
   );
 };

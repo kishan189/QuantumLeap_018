@@ -5,7 +5,7 @@ import './Card.css';
 const services = [
   { title: 'Book Appointment', icon: '📅', path: '/book-appointment' },
   { title: 'Nutrition Tracking', icon: '📝', path: '/Nutrition-tracking' },
-  { title: 'Physical Activity Trainer', icon: '💻', path: '/ Physical Activity Trainer' },
+  { title: 'Physical Activity Trainer', icon: '💻', path: '/HomePhysicalActivityTracker' },
   // { title: 'Buy Medicine', icon: '💊', path: '/buy-medicine' },
   // { title: 'Find Hospital', icon: '🏥', path: '/find-hospital' },
 ];

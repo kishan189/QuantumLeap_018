@@ -22,9 +22,9 @@ export const Exploration = () => {
 
       <div style={{ marginTop: 40, marginBottom: 40 }}>
         <div className='d-flex justify-content-center'>
-          <div className='customImgBox'>
+          {/* <div className='customImgBox'>
             <img style={{ width: "100%", height: "auto", marginRight: 20 }} src='https://www.apollohospitals.com/wp-content/themes/apollohospitals/assets-v3/images/speciality_ah.webp' alt='image' />
-          </div>
+          </div> */}
           <div className='customImgBox'>
             <img style={{ width: "100%", height: "auto" }} src='https://images.pexels.com/photos/263337/pexels-photo-263337.jpeg?auto=compress&cs=tinysrgb&w=600' alt='image' />
           </div>
